@@ -15,7 +15,7 @@ namespace Quiz_App
         #region Constructor
         public ViewModel()
         {
-
+            ButtonCommands = new ButtonCommands(this);
         }
         #endregion
         #region Public Properties
@@ -84,6 +84,8 @@ namespace Quiz_App
                 }
             }
         }
+
+        public ButtonCommands ButtonCommands { get; }
         #endregion
         #region Question and Answer Arrays
         string[] Questions = new string[]
