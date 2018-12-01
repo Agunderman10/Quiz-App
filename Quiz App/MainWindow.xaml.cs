@@ -20,9 +20,11 @@ namespace Quiz_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel viewModel = new ViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = viewModel;
         }
     }
 }

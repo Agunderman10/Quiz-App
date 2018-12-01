@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="Tan">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding Question}" TextAlignment="Center" FontSize="30" Background="White" Height="100" Width="600" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Margin="20"/>
+
+        <Button Content="Next" FontSize="30" Grid.Column="3" Grid.Row="0" Margin="30" Background="Firebrick"/>
+        <Button Content="{Binding Answer1}" Grid.Column="0" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
+        <Button Content="{Binding Answer2}" Grid.Column="1" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
+        <Button Content="{Binding Answer3}" Grid.Column="2" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
+        <Button Content="{Binding Answer4}" Grid.Column="3" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
+
     </Grid>
 </Window>
