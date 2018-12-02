@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="QuestionAnswerManipulation\ChangeOutNewQuestionAndAnswers.cs" />
     <Compile Include="Commands\ButtonCommands.cs" />
+    <Compile Include="QuestionAnswerManipulation\GradeCalculator.cs" />
     <Compile Include="QuestionAnswerManipulation\Question.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Page Include="MainWindow.xaml">

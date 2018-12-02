@@ -7,16 +7,23 @@ namespace Quiz_App
     class ViewModel : INotifyPropertyChanged
     {
         #region Private Fields
-        private string _questionOnScreen = "14 + 28 = ?";
-        private string _answer1 = "36";
-        private string _answer2 = "45";
-        private string _answer3 = "43";
-        private string _answer4 = "42";
+        private string _questionOnScreen;
+        private string _answer1;
+        private string _answer2;
+        private string _answer3;
+        private string _answer4;
         #endregion
         #region Constructor
         public ViewModel()
         {
             ButtonCommands = new ButtonCommands(this); 
+
+            var currentQuestion = Questions[0];
+            QuestionOnScreen = currentQuestion.question;
+            Answer1 = currentQuestion.answer1;
+            Answer2 = currentQuestion.answer2;
+            Answer3 = currentQuestion.answer3;
+            Answer4 = currentQuestion.answer4;
         }
         #endregion
         #region Public Properties
@@ -89,6 +96,7 @@ namespace Quiz_App
         public ButtonCommands ButtonCommands { get; }
         #endregion
         #region Questions Initialization and Array
+        public static Question Q0 = new Question("14 + 28 = ?", "36", "45", "43", "42", "42");
         public static Question Q1 = new Question("13 + 2 = ?", "13","12","15","16","15");
         public static Question Q2 = new Question("12 + 7 = ?", "13","20","15","19","19");
         public static Question Q3 = new Question("33 - 15 = ?", "21","18","19","16","18");
@@ -97,12 +105,11 @@ namespace Quiz_App
         public static Question Q6 = new Question("45 - 12 = ?", "35","31","32","33","33");
         public static Question Q7 = new Question("9 + 3 = ?", "13","12","15","14","12");
         public static Question Q8 = new Question("23 - 17 = ?", "3","2","5","6","6");
-        public static Question Q9 = new Question("12 - 9 = ?", "3","2","5","6","3");
-        public static Question Q10 = new Question("34 + 27 = ?", "63","62","65","61","61");
+        public static Question Q9 = new Question("12 - 9 = ?", "3","1","2","4","3");
 
-        public static List<Question> Questions = new List<Question>
+        public static Question[] Questions = new Question[]
         {
-            Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10
+            Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9
         };
         
         #endregion

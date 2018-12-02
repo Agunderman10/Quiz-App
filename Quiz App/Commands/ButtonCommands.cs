@@ -6,7 +6,7 @@ namespace Quiz_App
     class ButtonCommands : ICommand
     {
         private readonly ViewModel viewModel;
-        public string[] Questions;
+        private static int currentQuestion = 0;
         
         public ButtonCommands(ViewModel viewModel)
         {
@@ -19,7 +19,9 @@ namespace Quiz_App
         public void Execute(object parameter)
         {
             ChangeOutNewQuestionAndAnswers changeOutQA = new ChangeOutNewQuestionAndAnswers(viewModel);
+            GradeCalculator gradeCalculator = new GradeCalculator(currentQuestion++);
             changeOutQA.NextQuestionAndAnswers();
+            gradeCalculator.FindHowManyCorrectAnswers(parameter);
         }
     }
 }
