@@ -6,6 +6,7 @@ namespace Quiz_App
     class ButtonCommands : ICommand
     {
         private readonly ViewModel viewModel;
+        public string[] Questions;
         
         public ButtonCommands(ViewModel viewModel)
         {
@@ -17,10 +18,8 @@ namespace Quiz_App
 
         public void Execute(object parameter)
         {
-            switch(parameter)
-            {
-                
-            }
+            ChangeOutNewQuestionAndAnswers changeOutQA = new ChangeOutNewQuestionAndAnswers(viewModel);
+            changeOutQA.NextQuestionAndAnswers();
         }
     }
 }

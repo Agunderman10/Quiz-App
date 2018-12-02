@@ -6,16 +6,16 @@ namespace Quiz_App
     class ViewModel : INotifyPropertyChanged
     {
         #region Private Fields
-        private string _question;
-        private string _answer1;
-        private string _answer2;
-        private string _answer3;
-        private string _answer4;
+        private string _question = "14 + 28 = ?";
+        private string _answer1 = "36";
+        private string _answer2 = "45";
+        private string _answer3 = "43";
+        private string _answer4 = "42";
         #endregion
         #region Constructor
         public ViewModel()
         {
-            ButtonCommands = new ButtonCommands(this);
+            ButtonCommands = new ButtonCommands(this); 
         }
         #endregion
         #region Public Properties
@@ -86,36 +86,57 @@ namespace Quiz_App
         }
 
         public ButtonCommands ButtonCommands { get; }
+        public ChangeOutNewQuestionAndAnswers ChangeOutNewQuestionAndAnswers { get; }
         #endregion
         #region Question and Answer Arrays
-        string[] Questions = new string[]
+        public static string[] Questions = new string[]
         {
             "13 + 2 = ?",
             "12 + 7 = ?",
+            "34 + 12 = ?",
+            "13 + 5 = ?",
+            "23 + 21 = ?",
+            "10 + 12 = ?",
+            "45 - 12 = ?",
+            "9 + 3 = ?",
+            "23 - 15 = ?",
+            "12 - 9 = ?",
         };
         
-        string[] Button1AnswerChoices = new string[]
+        public static string[] Button1AnswerChoices = new string[]
         {
             "15",
             "23",
+            "46",
+            "15",
+            "17"
         };
 
-        string[] Button2AnswerChoices = new string[]
+        public static string[] Button2AnswerChoices = new string[]
         {
             "16",
             "12",
+            "34",
+            "19",
+            "44",
         };
 
-        string[] Button3AnswerChoices = new string[]
+        public static string[] Button3AnswerChoices = new string[]
         {
             "14",
             "19",
+            "23",
+            "28",
+            "46",
         };
 
-        string[] Button4AnswerChoices = new string[]
+        public static string[] Button4AnswerChoices = new string[]
         {
             "13",
             "10",
+            "47",
+            "18",
+            "48",
         };
         #endregion
         #region INotifyPropertyChanged Definition

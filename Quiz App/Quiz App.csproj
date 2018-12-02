@@ -55,8 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="QuestionAnswerManipulation\ChangeOutNewQuestionAndAnswers.cs" />
     <Compile Include="Commands\ButtonCommands.cs" />
-    <Compile Include="ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
