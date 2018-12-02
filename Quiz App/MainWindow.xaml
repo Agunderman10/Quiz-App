@@ -20,7 +20,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="{Binding Question}" TextAlignment="Center" FontSize="30" Background="White" Height="100" Width="700" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="20"/>
+        <TextBlock Text="{Binding QuestionOnScreen}" TextAlignment="Center" FontSize="30" Background="White" Height="100" Width="700" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="20"/>
 
         <Button Content="{Binding Answer1}" Command="{Binding ButtonCommands}" Grid.Column="0" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
         <Button Content="{Binding Answer2}" Command="{Binding ButtonCommands}"  Grid.Column="1" Grid.Row="2" Background="Gray" Height="50" Width="170" BorderBrush="Black" BorderThickness="5"/>
