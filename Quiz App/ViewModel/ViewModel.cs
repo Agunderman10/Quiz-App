@@ -99,7 +99,7 @@ namespace Quiz_App
             "10 + 12 = ?",
             "45 - 12 = ?",
             "9 + 3 = ?",
-            "23 - 15 = ?",
+            "23 - 17 = ?",
             "12 - 9 = ?",
         };
         
@@ -109,7 +109,12 @@ namespace Quiz_App
             "23",
             "46",
             "15",
-            "17"
+            "17",
+            "23",
+            "33",
+            "12",
+            "8",
+            "3",
         };
 
         public static string[] Button2AnswerChoices = new string[]
@@ -119,6 +124,11 @@ namespace Quiz_App
             "34",
             "19",
             "44",
+            "21",
+            "35",
+            "10",
+            "7",
+            "4",
         };
 
         public static string[] Button3AnswerChoices = new string[]
@@ -128,6 +138,11 @@ namespace Quiz_App
             "23",
             "28",
             "46",
+            "20",
+            "31",
+            "11",
+            "8",
+            "2",
         };
 
         public static string[] Button4AnswerChoices = new string[]
@@ -137,6 +152,11 @@ namespace Quiz_App
             "47",
             "18",
             "48",
+            "22",
+            "32",
+            "9",
+            "6",
+            "5",
         };
         #endregion
         #region INotifyPropertyChanged Definition
