@@ -22,11 +22,11 @@ namespace Quiz_App
             }
 
             var currentQuestion = ViewModel.Questions[arrayIndex++];
-            viewModel.QuestionOnScreen = currentQuestion.question;
-            viewModel.Answer1 = currentQuestion.answer1;
-            viewModel.Answer2 = currentQuestion.answer2;
-            viewModel.Answer3 = currentQuestion.answer3;
-            viewModel.Answer4 = currentQuestion.answer4;
+            viewModel.QuestionOnScreen = currentQuestion.QuestionProperty;
+            viewModel.Answer1 = currentQuestion.Answer1;
+            viewModel.Answer2 = currentQuestion.Answer2;
+            viewModel.Answer3 = currentQuestion.Answer3;
+            viewModel.Answer4 = currentQuestion.Answer4;
         }
     }
 }

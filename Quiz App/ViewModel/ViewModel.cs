@@ -19,11 +19,11 @@ namespace Quiz_App
             ButtonCommands = new ButtonCommands(this); 
 
             var currentQuestion = Questions[0];
-            QuestionOnScreen = currentQuestion.question;
-            Answer1 = currentQuestion.answer1;
-            Answer2 = currentQuestion.answer2;
-            Answer3 = currentQuestion.answer3;
-            Answer4 = currentQuestion.answer4;
+            QuestionOnScreen = currentQuestion.QuestionProperty;
+            this.Answer1 = currentQuestion.Answer1;
+            this.Answer2 = currentQuestion.Answer2;
+            this.Answer3 = currentQuestion.Answer3;
+            this.Answer4 = currentQuestion.Answer4;
         }
         #endregion
         #region Public Properties

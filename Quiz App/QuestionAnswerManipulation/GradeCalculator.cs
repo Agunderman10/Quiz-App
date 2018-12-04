@@ -81,10 +81,10 @@ namespace Quiz_App
                         ++howManyCorrect;
                     }
                     string howManyCorrectMessageBox = howManyCorrect.ToString();
-                    double gradePercentage = (howManyCorrect/ViewModel.Questions.Length) * 100;
+                    double gradePercentage = ((double)howManyCorrect/(double)ViewModel.Questions.Length) * 100;
                     string gradePercentageMessageBox = gradePercentage.ToString();
-                    MessageBox.Show("You got " + howManyCorrectMessageBox + " correct. Your grade is %" + 
-                        gradePercentageMessageBox + ". You may now exit the test.");
+                    MessageBox.Show("You got " + howManyCorrectMessageBox + " correct. Your grade is " + 
+                        gradePercentageMessageBox + "%. You may now exit the test.");
                     break;
 
             }
